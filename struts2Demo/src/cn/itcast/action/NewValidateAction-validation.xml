@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC "-//OpenSymphony Group//XWork Validator 1.0.3//EN"
+"http://www.opensymphony.com/xwork/xwork-validator-1.0.3.dtd">
+<validators> 
+    <field name="msg"> 
+         <field-validator type="requiredstring"> 
+             <message>请输入信息</message> 
+         </field-validator> 
+    </field> 
+    
+    <field name="age"> 
+         <field-validator type="int"> 
+             <param name="min">13</param> 
+             <param name="max">20</param> 
+             <message> 
+                  必须在 13至20之间 
+             </message> 
+         </field-validator> 
+    </field> 
+</validators> 
+

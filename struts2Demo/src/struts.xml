@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="itcast" namespace="/test" extends="struts-default">
+		<action name="helloworld" class="cn.itcast.action.HelloWorldAction"
+			method="execute">
+			<result name="success">/WEB-INF/page/hello.jsp</result>
+		</action>
+		<action name="submit" class="cn.itcast.action.MoreSubmitAction">
+			<result name="save">/WEB-INF/page/result.jsp</result>
+			<result name="print">/WEB-INF/page/result.jsp</result>
+		</action>
+		<action name="validate" class="cn.itcast.action.ValidateAction">
+			<result name="success">/validate.jsp</result>
+			<result name="input">/validate.jsp</result>
+		</action>
+		<action name="new_validate" class="cn.itcast.action.NewValidateAction">
+			<result name="input">/validate_form.jsp</result>
+			<result name="success">/validate_form.jsp</result>
+		</action>
+		<action name="person" class="cn.itcast.action.PersonAction">
+			<result name="input">/check.jsp</result>
+			<result name="message">/WEB-INF/page/message.jsp</result>
+		</action>
+		<action name="cperson" class="cn.itcast.action.PersonNewAction">
+			<result name="input">/newcheck.jsp</result>
+			<result name="message">/WEB-INF/page/message.jsp</result>
+		</action>
+
+		<action name="dateformat" class="cn.itcast.action.DateFormatAction">
+			<result name="success">/WEB-INF/page/message.jsp</result>
+		</action>
+	</package>
+	
+	<package name="employee" namespace="/control/employee" extends="struts-default">
+		<action name="list_*" class="cn.itcast.action.FileUploadAction"
+			method="{1}">
+			<result name="success">/WEB-INF/page/message.jsp</result>
+		</action>
+	</package>
+
+
+</struts>
